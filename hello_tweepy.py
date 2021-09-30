@@ -15,4 +15,6 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 # tweet
+# Twitter DevelopersのApp permissions
+# Write許可していなかったせいで、原因解決にだいぶ時間かかった。
 api.update_status("Hello world!")
