@@ -1,9 +1,7 @@
 # Tweepyを用いてAPIから「Hello world!」とtweetを行うプログラム
 import os
 import tweepy
-from dotenv import load_dotenv
 
-load_dotenv('./.env')
 TWITTER_API_KEY = os.environ.get('TWITTER_API_KEY')
 TWITTER_API_SECRET_KEY = os.environ.get('TWITTER_API_SECRET_KEY')
 ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
