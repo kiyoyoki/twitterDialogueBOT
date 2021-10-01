@@ -1,4 +1,5 @@
 # Tweepyを用いてAPIから「Hello world!」とtweetを行うプログラム
+# v1.1 →　v2なので、そちらを使用したほうが良い?
 import os
 from posix import times_result
 import tweepy
@@ -47,7 +48,20 @@ api = tweepy.API(auth)
 # Write許可していなかったせいで、原因解決にだいぶ時間かかった。
 # api.update_status("Hello world!")
 
+
 # 自身のタイムライン取得(デフォルトは最新20status)
 # timeline = api.home_timeline()
 # for tweet in timeline:
 #     print(f"{tweet.user.name} said {tweet.text}")
+
+
+# idを指定して、特定のアカウントのステータスを読み込む
+user = api.get_user(screen_name="sekine_kiyo")
+print("User details:")
+print(user.name)
+print(user.description)
+print(user.location)
+
+print("Last 20 Followers:")
+for follower in user.followers():
+    print(follower.name)
