@@ -1,5 +1,6 @@
 # Tweepyを用いてAPIから「Hello world!」とtweetを行うプログラム
 import os
+from posix import times_result
 import tweepy
 
 """
@@ -44,4 +45,9 @@ api = tweepy.API(auth)
 # tweet
 # Twitter DevelopersのApp permissions
 # Write許可していなかったせいで、原因解決にだいぶ時間かかった。
-api.update_status("Hello world!")
+# api.update_status("Hello world!")
+
+# 自身のタイムライン取得(デフォルトは最新20status)
+# timeline = api.home_timeline()
+# for tweet in timeline:
+#     print(f"{tweet.user.name} said {tweet.text}")
