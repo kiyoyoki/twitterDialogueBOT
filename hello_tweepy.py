@@ -6,6 +6,27 @@ import tweepy
 A status is a tweet.
 A friendship is a follow-follower relationship.
 A favorite is a like.
+
+Tweepy’s functionality can be divided into the following groups
+
+OAuth：OAuth認証に関わる機能
+
+The API class：Twitter API endpointsへアクセスする機能
+Methods for user timelines
+Methods for tweets
+Methods for users
+Methods for followers
+Methods for your account
+Methods for likes
+Methods for blocking users
+Methods for searches
+Methods for trends
+Methods for streaming
+
+Models
+
+Cursors
+Streams
 """
 
 TWITTER_API_KEY = os.environ.get('TWITTER_API_KEY')
