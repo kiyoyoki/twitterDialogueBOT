@@ -2,6 +2,12 @@
 import os
 import tweepy
 
+"""
+A status is a tweet.
+A friendship is a follow-follower relationship.
+A favorite is a like.
+"""
+
 TWITTER_API_KEY = os.environ.get('TWITTER_API_KEY')
 TWITTER_API_SECRET_KEY = os.environ.get('TWITTER_API_SECRET_KEY')
 ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
