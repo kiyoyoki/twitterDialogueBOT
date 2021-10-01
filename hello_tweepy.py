@@ -56,6 +56,7 @@ api = tweepy.API(auth)
 
 
 # idを指定して、特定のアカウントのステータスを読み込む
+"""
 user = api.get_user(screen_name="sekine_kiyo")
 print("User details:")
 print(user.name)
@@ -65,3 +66,12 @@ print(user.location)
 print("Last 20 Followers:")
 for follower in user.followers():
     print(follower.name)
+"""
+
+# tweet検索
+# Pythonが含まれる日本語の最新Tweetを10件取得
+for tweet in api.search_tweets(q="Python", lang="en", result_type="recent", count=10):
+    print(f"{tweet.user.name}:{tweet.text}\n")
+
+# 他にもいろいろできる
+# フォロー・プロフィール編集・いいね・ブロックユーザ表示etc...
