@@ -69,9 +69,20 @@ for follower in user.followers():
 """
 
 # tweet検索
-# Pythonが含まれる日本語の最新Tweetを10件取得
+# Pythonが含まれる英語の最新Tweetを10件取得
+"""
 for tweet in api.search_tweets(q="Python", lang="en", result_type="recent", count=10):
     print(f"{tweet.user.name}:{tweet.text}\n")
+"""
+
+# トレンド検索
+# 引数にはWOEIDという住所のようなものを指定する(1116753はSaitama)
+# https://qiita.com/hogeta_/items/8e3224c4960e19b7a33a
+"""
+trends_result = api.get_place_trends(id=1116753)
+for trend in trends_result[0]["trends"]:
+    print(trend["name"])
+"""
 
 # 他にもいろいろできる
 # フォロー・プロフィール編集・いいね・ブロックユーザ表示etc...
