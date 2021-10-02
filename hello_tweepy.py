@@ -1,7 +1,6 @@
 # Tweepyを用いてAPIから「Hello world!」とtweetを行うプログラム
 # v1.1 →　v2なので、そちらを使用したほうが良い?
 import os
-from posix import times_result
 import tweepy
 
 """
